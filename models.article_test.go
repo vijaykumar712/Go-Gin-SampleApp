@@ -23,3 +23,13 @@ func TestGetAllArticles(t *testing.T) {
 		}
 	}
 }
+
+
+func TestGetArticleByID(t *testing.T) {
+	article,err := getArticleByID(1)
+
+	if err !=nil || article.ID != 1 {
+		t.Fail()
+	}
+
+}
